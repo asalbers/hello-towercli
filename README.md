@@ -2,6 +2,65 @@
 
 This is an empty bundle that porter has created to get you started!
 
+# Usage
+
+## prereqs
+
+Install the mixin
+
+```sh
+porter mixin install towercli --url https://github.com/squillace/porter-towercli/releases/download --version v0.1.0
+```
+
+## Running the bundle
+
+Supporting cli docs
+[tower_cli docs](https://docs.ansible.com/ansible-tower/3.5.3/html/towerapi/tower_cli.html)
+
+[tower_cli docs alt](https://tower-cli.readthedocs.io/en/latest/cli_ref/index.html)
+
+### Setting credentials
+
+User interactive cli to create the set and export to json for pipeline usage.
+
+```sh
+ porter credentials show tower-creds --output json > tower-creds.json
+```
+
+### Installing 
+
+```sh
+porter install towercli-test -c tower-creds -r ghcr.io/asalbers/hello-towercli:v0.1.0
+```
+
+Sample output
+
+```sh
+porter install tower-test -c ./tower-creds.json
+installing tower-test...
+executing install action from hello-towercli (installation: tower-test)
+Creating and admin configuration....
+
+# Options from environment variables.
+username: *******
+host: 127.0.0.1
+password: *******
+
+# Defaults.
+verify_ssl: True
+format: human
+color: True
+certificate:
+use_token: False
+description_on: False
+insecure: False
+oauth_token:
+verbose: False
+
+execution completed successfully!
+
+```
+
 # Contents
 
 ## porter.yaml

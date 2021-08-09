@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0-DRAFT+b6c701f",
+  "name": "tower-creds",
+  "created": "2021-08-09T17:31:08.280492359-05:00",
+  "modified": "2021-08-09T17:31:08.280492359-05:00",
+  "credentials": [
+    {
+      "name": "password",
+      "source": {
+        "env": "TOWER_PASSWORD"
+      }
+    },
+    {
+      "name": "username",
+      "source": {
+        "env": "TOWER_USERNAME"
+      }
+    }
+  ]
+}
