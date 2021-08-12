@@ -18,6 +18,14 @@ install:
         - config
       flags:
         scope: "local"
+  - towercli:
+      description: "test"
+      arguments:
+        - job
+        - launch
+        - --job-template=4
+        - --extra-vars='a=5 b=3'
+        - --extra-vars='test_vars.yaml'
 
   # Sample of launching a job via tower cli
   # - towercli:
